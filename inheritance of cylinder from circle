@@ -1,0 +1,49 @@
+package javaapplication39;
+class circle
+{
+    public double radius;
+    public circle()
+    {
+        radius=0.0;
+    }
+    public double area()
+    {
+        return Math.PI*radius*radius;
+    }
+    public double perimeter()
+    {
+        return 2*(Math.PI*radius);
+    }
+}
+class cylinder extends circle
+{
+    public double height;
+    public cylinder()
+    {
+        height=0.0;
+    }
+    public double volume()
+    {
+        return Math.PI*radius*radius*height;
+    }
+    
+}
+
+public class JavaApplication39 {
+
+    
+    public static void main(String[] args) {
+       
+        circle c1=new circle();
+        cylinder c2=new cylinder();
+        
+        c1.radius=2;
+        c2.radius=3;
+        c2.height=3;
+        
+        System.out.println("area of circle:"+c1.area());
+        System.out.println("surfsce area of cylinder:"+c2.area());
+        System.out.println("volume of cylinder:"+c2.volume());
+    }
+    
+}
