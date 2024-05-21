@@ -1,0 +1,61 @@
+// abstract classes example for shape class 
+package javaapplication45;
+
+abstract class shape
+{
+    abstract double area();
+    abstract double perimeter();
+}
+class circle extends shape
+{
+    public double radius;
+    public circle()
+    {
+        radius=0;
+    }
+    
+    public double area()
+    {
+        return Math.PI*radius*radius;  
+    }
+    public double perimeter()
+    {
+        return 2*Math.PI*radius;
+    }
+}
+class square extends shape
+{
+    public double length;
+    public double breadth;
+    public double area()
+    {
+        return length*breadth;
+    }
+    public double perimeter()
+    {
+        return 2*(length+breadth);
+    }
+}
+
+public class JavaApplication45 {
+
+    
+    public static void main(String[] args) 
+    {
+       square s=new square();
+       s.breadth=2;
+       s.length=2;
+       shape s1=s;
+       System.out.println(s.area());
+       System.out.println(s.perimeter());
+       
+       circle c=new circle();
+       c.radius=2;
+       shape c1=c;
+       System.out.println(c.area());
+       System.out.println(c.perimeter());
+       
+       
+     }
+    
+}
