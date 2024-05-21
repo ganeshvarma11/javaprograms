@@ -1,0 +1,62 @@
+
+// implementing interfaces in java 
+package interfaces;
+
+class phone
+{
+    public void call(){System.out.println("making phone call:");}
+    public void sms(){System.out.println("making phone sms:");}
+}
+interface camera
+{
+    void click();
+    void viedorecord();
+}
+interface musicPlayer
+{
+    void play();
+    void stop();
+}
+interface videoCall
+{
+    void makevideocall();
+    void cut();
+}
+class smartPhone extends phone implements camera,musicPlayer,videoCall
+{
+    @Override
+    public void click(){System.out.println("taking a picture:");}
+    @Override
+    public void viedorecord(){System.out.println("video recordng:");}
+    @Override
+    public void play(){System.out.println("playin music:");}
+    @Override
+    public void stop(){System.out.println("music stopped:");}
+    @Override
+    public void makevideocall(){System.out.println("making phone video call:");}
+    @Override
+    public void cut(){System.out.println("cutting video call");}
+    
+    //extra features
+    public void maps(){System.out.println("maps opened");}
+    public void payments(){System.out.println("making online payments");}
+ 
+}
+
+
+public class Interfaces {
+
+    public static void main(String[] args) 
+    {
+        smartPhone s7=new smartPhone();
+        s7.call();
+        s7.sms();
+        camera c=new smartPhone();
+        c.click();
+        c.getClass();
+        musicPlayer mp=new smartPhone();
+        mp.play();
+       
+    }
+    
+}
