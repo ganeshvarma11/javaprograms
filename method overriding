@@ -1,0 +1,32 @@
+// method overriding in java
+package javaapplication41;
+
+class Super
+{
+    public void display()
+    {
+        System.out.println("HEllO");
+    }
+}
+class Sub extends Super
+{
+    public void display()
+    {
+        System.out.println("HELLO  WORLD");
+    }
+}
+public class JavaApplication41 {
+    
+    public static void main(String[] args)
+    {
+        Super su=new Super();
+        Sub sb=new Sub();
+        
+        su.display();
+        sb.display();
+        
+        
+        
+    }
+    
+}
